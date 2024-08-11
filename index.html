@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housewarming Invitation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #9adff3;
+            font-family: Arial, sans-serif;
+            background: url('Home_bg.jpeg') no-repeat center center/cover; /* Corrected background image syntax */
+        }
+        .button-container {
+            text-align: center;
+        }
+        .invitation-button, .download-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        .invitation-button {
+            background-color: #e74c3c;
+        }
+        .invitation-button:hover {
+            background-color: #c0392b;
+        }
+        .download-button {
+            background-color: #3498db;
+        }
+        .download-button:hover {
+            background-color: #2980b9;
+        }
+        .maps-logo {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .maps-logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .maps-logo i {
+            font-size: 40px;
+            color: #d35400;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .maps-logo i:hover {
+            color: #e67e22;
+        }
+        .maps-logo span {
+            margin-left: 10px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <h1>Welcome to Our Housewarming Party!</h1>
+        <p>We would love for you to join us in celebrating our new home.</p>
+        <button class="invitation-button" onclick="location.href='invitation.html'">
+            View Invitation
+        </button>
+        <button class="download-button" onclick="window.location.href='png2pdf.pdf'">
+            Download Invitation
+        </button>
+        <div class="maps-logo">
+            <a href="https://goo.gl/maps/vsPWa5nxQo1wmfMg9" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Get directions</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
