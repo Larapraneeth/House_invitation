@@ -1,193 +1,249 @@
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body styling */
-  body {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: url("assets/pine-wood-texture.jpg");
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-  }
-  
-  /* Flip card container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("assets/pine-wood-texture.jpg");
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Flip card container */
+#flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 500px;
+  perspective: 1000px;
+  margin: 10%;
+}
+
+/* Flip card inner styling */
+#flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Flip card front and back styling */
+#flip-card-front,
+#flip-card-back {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Flip card front styling */
+#flip-card-front {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+/* Flip card back styling */
+#flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: white;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+/* Letter styling */
+#letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  max-height: 90%;
+  background-color: #8cc5e7;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 1px;
+  padding: 10px;
+}
+
+/* Envelope styling */
+#envelope {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  max-height: 500px;
+  max-width: 500px;
+  top: 0;
+  left: 0;
+  border-top: 33.33% solid transparent;
+  border-right: 33.33% solid #bebebe;
+  border-left: 33.33% solid #bebebe;
+  border-bottom: 50% solid #b0b0b0;
+  z-index: 3;
+}
+
+/* Lid styling */
+.lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  border-right: 185px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 200px solid transparent;
+  transform-origin: top;
+}
+
+/* Lid one styling */
+#one {
+  border-top: 130px solid #0b9deb;
+  transform: rotateX(0deg);
+  z-index: 3;
+}
+
+/* Lid two styling */
+#two {
+  border-top: 180px solid white;
+  transform: rotateX(90deg);
+  z-index: 1;
+}
+
+/* Stamp styling */
+#stamp {
+  position: absolute;
+  top: 10px;
+  flex: 0;
+}
+
+/* Stamp image styling */
+#stamp img {
+  float: right;
+  width: 35%;
+}
+
+/* Name styling */
+#Name {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 15%;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* Company name styling */
+#companyName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  width: 100%; /* Ensures the text stays within the lid's boundaries */
+}
+
+/* Message styling */
+#message {
+  position: absolute;
+  top: 10%;
+  color: white;
+  margin: 10px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Popup styling */
+#popUp {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #ced6d125;
+  z-index: 1000;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup message styling */
+#popup-message {
+  color: rgb(177, 152, 227);
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
   #flip-card {
-    background-color: transparent;
-    width: 600px;
-    height: 500px;
-    perspective: 1000px;
-    margin: 10%;
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+    max-height: 300px;
+    margin: 5%;
   }
-  
-  /* Flip card inner styling */
-  #flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Flip card front and back styling */
+
   #flip-card-front,
   #flip-card-back {
-    position: absolute;
-    width: 600px;
-    height: 500px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  /* Flip card front styling */
-  #flip-card-front {
-    background-color: #c8c8c8;
-    color: black;
-  }
-  
-  /* Flip card back styling */
-  #flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-    background-color: white;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
-  
-  /* Letter styling */
-  #letter {
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
-    background-color: #607b8b;
-    background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 1px;
-    padding: 10px;
   }
-  
-  /* Envelope styling */
+
   #envelope {
     position: absolute;
-    height: 500px;
-    width: 600px;
-    top: 0;
-    left: 0;
-    border-top: 200px solid transparent;
-    border-right: 200px solid #bebebe;
-    border-left: 200px solid #bebebe;
-    border-bottom: 300px solid #b0b0b0;
-    z-index: 3;
-  }
-  
-  /* Lid styling */
-  .lid {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
-    border-right: 200px solid transparent;
-    border-bottom: 200px solid transparent;
-    border-left: 200px solid transparent;
-    transform-origin: top;
-  }
-  
-  /* Lid one styling */
-  #one {
-    border-top: 200px solid #a8a8a8;
-    transform: rotateX(0deg);
+    max-height: 400px; /* Reduced size */
+    max-width: 400px;  /* Reduced size */
+    top: 0;
+    left: 0;
+    border-top: 25% solid transparent;  /* Reduced size */
+    border-right: 25% solid #bebebe;     /* Reduced size */
+    border-left: 25% solid #bebebe;      /* Reduced size */
+    border-bottom: 40% solid #b0b0b0;    /* Reduced size */
     z-index: 3;
   }
   
-  /* Lid two styling */
-  #two {
-    border-top: 200px solid white;
-    transform: rotateX(90deg);
-    z-index: 1;
+
+  #letter {
+    width: 90%;
+    padding: 5px;
   }
-  
-  /* Stamp styling */
-  #stamp {
-    position: absolute;
-    top: 10px;
-    flex: 0;
-  }
-  
-  /* Stamp image styling */
-  #stamp img {
-    float: right;
-    width: 35%;
-  }
-  
-  /* Name styling */
+
   #Name {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 35%;
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
+    font-size: 16px;
   }
-  
-  /* Company name styling */
-  #companyName {
-    position: absolute;
-    top: -95%;
-    text-align: center;
-    color: white;
-    font-weight: 800;
-    left: 30%;
-    right: 30%;
-  }
-  
-  /* Message styling */
+
   #message {
-    position: absolute;
-    top: 10%;
-    color: white;
-    margin: 10px 20px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-align: center;
+    font-size: 12px;
   }
-  
-  /* Popup styling */
-  #popUp {
-    height: 50px;
-    width: 100%;
-    position: fixed; /* Changed to fixed for better positioning */
-    top: 0;
-    background-color: #ced6d125;
-    z-index: 1000; /* Ensure popup is above other content */
-    display: none; /* Initially hidden */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Popup message styling */
+
   #popup-message {
-    color: rgb(241, 240, 243);
-    font-size: 24px; /* Increased font size */
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: center; /* Center text horizontally */
-    margin: 0;
+    font-size: 18px;
   }
-  
+}
