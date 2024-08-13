@@ -17,7 +17,7 @@
             height: 100vh;
             background-color: #9adff3;
             font-family: Arial, sans-serif;
-            background: url('home_bg.jpeg') no-repeat center center/cover; /* Corrected background image syntax */
+            background: url('Home_bg.jpeg') no-repeat center center/cover;
         }
         .button-container {
             text-align: center;
@@ -69,6 +69,31 @@
             font-size: 18px;
             color: #2c3e50;
         }
+        .phone-contact {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .phone-contact a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .phone-contact i {
+            font-size: 40px;
+            color: #27ae60;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .phone-contact i:hover {
+            color: #2ecc71;
+        }
+        .phone-contact span {
+            margin-left: 10px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +110,12 @@
             <a href="https://goo.gl/maps/vsPWa5nxQo1wmfMg9" target="_blank">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Get directions</span>
+            </a>
+        </div>
+        <div class="phone-contact">
+            <a href="tel:+9392664263">
+                <i class="fas fa-phone-alt"></i>
+                <span>Phone No.</span>
             </a>
         </div>
     </div>
